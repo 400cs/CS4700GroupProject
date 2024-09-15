@@ -20,7 +20,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         speedX = Input.GetAxisRaw("Horizontal");
         speedY = Input.GetAxisRaw("Vertical");
-        movement = new Vector2 (speedX, speedY) * movSpeed;
-        myRigidbody.velocity = movement.normalized;
+        movement = new Vector2(speedX, speedY);
+        myRigidbody.velocity = movement.normalized * movSpeed;
     }
 }
